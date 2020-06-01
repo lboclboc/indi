@@ -42,10 +42,10 @@ namespace INDI
 SER_Recorder::SER_Recorder()
 {
     name = "SER";
-    strncpy(serh.FileID, "LUCAM-RECORDER", 14);
-    strncpy(serh.Observer, "                        Unknown Observer", 40);
-    strncpy(serh.Instrume, "                      Unknown Instrument", 40);
-    strncpy(serh.Telescope, "                       Unknown Telescope", 40);
+    strncpy(serh.FileID, "LUCAM-RECORDER", sizeof serh.FileID);
+    strncpy(serh.Observer, "                        Unknown Observer", sizeof serh.Observer);
+    strncpy(serh.Instrume, "                      Unknown Instrument", sizeof serh.Instrume);
+    strncpy(serh.Telescope, "                       Unknown Telescope", sizeof serh.Telescope);
     serh.LuID = 0;
     serh.PixelDepth = 8;
     number_of_planes=1;
